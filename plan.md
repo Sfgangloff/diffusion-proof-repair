@@ -13,7 +13,7 @@ on top.
 
 | # | Phase | Done-when | T4 fits? |
 |---|-------|-----------|----------|
-| 0 | Infrastructure & Lean harness | One CLI command corrupts and verifies a Lean file end-to-end | yes |
+| 0 | Infrastructure & Lean harness — **DONE (2026-05-08, `160e386`)** | One CLI command corrupts and verifies a Lean file end-to-end | yes |
 | 1 | Benchmark curation | 50 hand-checked Lean files in a fixed manifest, with annotated lemma/tactic spans | yes (CPU) |
 | 2 | Corruption taxonomy & typed operators | 5 corruption operators × 2 localities, parametrised by `ρ`, all property-tested | yes |
 | 3 | Small-AR pilot (end-to-end) | `success_rate(ρ)` curve for a single AR model on the 15-file pilot subset | yes |
@@ -29,7 +29,13 @@ written incrementally (one section per phase), not as a final phase.
 
 ---
 
-## Phase 0 — Infrastructure & Lean harness
+## Phase 0 — Infrastructure & Lean harness — DONE
+
+**Status.** Landed 2026-05-08 in commit `160e386`. `compile`, `verify`,
+process-pool variant, SQLite cache, CLI, three Lean fixtures, 15
+passing pytest cases, Colab bootstrap notebook, and GitHub Actions CI
+are all in place. `corrupt` and `sweep` ship as stubs returning exit
+code 2 — they're owned by Phases 2 and 6.
 
 **Goal.** A reproducible Python project that can take any compiling
 Lean 4 file, run it through a corruption + verify cycle, and return a
