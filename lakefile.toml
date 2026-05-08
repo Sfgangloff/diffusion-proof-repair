@@ -1,0 +1,6 @@
+name = "proofrepair"
+defaultTargets = ["Proofrepair"]
+
+[[lean_lib]]
+name = "Proofrepair"
+roots = ["Proofrepair"]

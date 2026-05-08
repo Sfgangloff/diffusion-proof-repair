@@ -1,0 +1,4 @@
+-- Stub root module so `lake build` succeeds.
+-- Phase 1 will replace this with actual Lean utilities (span tagging, etc.)
+-- if any project-side Lean code is needed; the harness today drives `lean`
+-- directly from Python.

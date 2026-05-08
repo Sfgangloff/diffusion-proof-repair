@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+
+# uv
+uv.lock
+
+# Lake / Lean
+.lake/
+lake-packages/
+lakefile.olean
+*.olean
+
+# Local cache
+.proofrepair_cache/
+*.sqlite
+*.sqlite-journal
+
+# Experiment outputs
+experiments/runs/*
+!experiments/runs/.gitkeep
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Notebooks
+.ipynb_checkpoints/
